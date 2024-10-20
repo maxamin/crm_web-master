@@ -1,0 +1,456 @@
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a, button, .btn {
+    outline: none !important;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+div.required label.control-label::before {
+    content: "* ";
+    color: inherit;
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #008000;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.ajax-autoload{
+    padding-top: 50px;
+}
+
+.as-link {
+    cursor: pointer;
+}
+
+/* alerts */
+.alert-callout {
+    font-size: 1.2em;
+}
+
+.alert-callout .close {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+/* modals */
+.modal-body {
+    font-size: 1.2em;
+}
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* error summary */
+.error-summary {
+    border: 1px solid #f44336;
+    border-radius: 3px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.38);
+    margin-bottom: 20px;
+}
+
+.error-summary p {
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.error-summary p > i{
+    padding-right: 10px;
+}
+
+.error-summary ul {
+    padding: 5px 0;
+    margin: 0;
+}
+
+.error-summary li {
+    color: #f44336;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+/* toastr */
+.toast {
+    font-size: 1.1em;
+}
+
+/* leads statuses */
+.status-name {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header .status-name {
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* tile input */
+.tile .tile-input {
+    padding: 0 16px;
+}
+
+.tile .tile-input .tile-text {
+    padding-bottom: 0;
+}
+
+/* selectric lead status */
+
+.selectric-lead-status .selectric {
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.selectric-lead-status .selectric-items {
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.selectric-lead-status .selectric .label {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    padding: 0;
+    line-height: 38px;
+    white-space: nowrap;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.selectric-lead-status .selectric-items li {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.selectric-lead-status .selectric-items li:hover {
+    opacity: 0.7;
+}
+
+/* products */
+
+.selectric-product-status .selectric {
+    border-radius: 2px;
+    height: 22px;
+    border: 1px solid transparent;
+}
+
+.selectric-product-status .selectric-items {
+    min-width: 120px;
+    border-radius: 2px;
+}
+
+.selectric-product-status .selectric .label {
+    color: inherit;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    height: 22px;
+    line-height: 20px;
+    white-space: nowrap;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.selectric-product-status .selectric .button {
+    display: none;
+}
+
+.selectric-product-status .selectric-items li {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* widgets */
+.widget-add-btn-container {
+    padding-bottom: 50px;
+}
+
+
+/* model row context menu */
+#modelRowContextMenuContainer {
+    display: none;
+    z-index: 1045;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#modelRowContextMenu {
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.model-row:hover {
+    background-color: #caf0ee;
+}
+
+.table-hover tbody tr:hover,
+.tr-hover {
+    background-color: #caf0ee;
+}
+
+.model-row.ui-sortable-helper {
+    background-color: #caf0ee;
+}
+
+.related-list-block small {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.6;
+}
+
+.btn-primary:active:hover, .btn-primary.active:hover {
+    color: #ffffff;
+    background-color: #077871;
+    border-color: #077871;
+}
+
+.btn-group.open .btn-primary {
+    color: #ffffff !important;
+    background-color: #077871 !important;
+    border-color: #077871 !important;
+}
+
+.opened {
+    color: #4caf50;
+    font-weight: 700;
+}
+
+.closed {
+    color: #969c9c;
+}
+
+.expired {
+    background-color: #ffebee;
+}
+
+.model-row.expired:hover {
+    background-color: #ffcdd2;
+}
+
+.table-hover tbody tr.expired:hover,
+.expired.tr-hover {
+    background-color: #ffcdd2;
+}
+
+.popover .popover-buttons-group {
+    margin-top: 10px;
+}
+
+.popover .popover-buttons-group.pull-right,
+.popover .popover-buttons-group.pull-left{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.popover .popover-buttons-group .btn {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.leads-sortable {
+    overflow-y: auto;
+}
+
+.leads-sortable-highlight {
+    outline: 3px dashed #ccc;
+    outline-offset: -3px;
+    background-color: #eee;
+}
+
+a.password-recovery {
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+/* select2 */
+.select2-choice {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.select2-results .select2-highlighted {
+    background-color: #0AA89E;
+}
+
+.select2-search-choice-close:before {
+    font-size: 16px;
+}
+
+.select2-container-multi .select2-search-choice-close:before {
+    font-size: 10px;
+}
+
+
+/* widget-avatar */
+.widget-avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.widget-avatar-container .case {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.3s ease-out;
+    background-color: #0aa89e;
+    opacity: 0;
+}
+
+.widget-avatar-container .case i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 50px;
+}
+
+.widget-avatar-container:hover .case {
+    opacity: 0.7;
+    box-shadow: 0 0 0 20px #fff inset;
+}
+
+.jcrop-preview-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.jcrop-preview-container .jcrop-active {
+    margin: 0 auto;
+}
+
+.ui-button-text {
+    padding: .33em .1em !important;
+}
